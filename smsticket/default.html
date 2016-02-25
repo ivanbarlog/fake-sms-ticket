@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>smsticket</title>
+
+    <!-- WinJS references -->
+    <!-- At runtime, ui-themed.css resolves to ui-themed.light.css or ui-themed.dark.css 
+    based on the user’s theme setting. This is part of the MRT resource loading functionality. -->
+    <link href="/css/ui-themed.css" rel="stylesheet" />
+    <script src="//Microsoft.Phone.WinJS.2.1/js/base.js"></script>
+    <script src="//Microsoft.Phone.WinJS.2.1/js/ui.js"></script>
+
+    <!-- smsticket references -->
+    <link href="/css/default.css" rel="stylesheet" />
+    <script src="/js/moment.js"></script>
+    <script src="/js/default.js"></script>
+</head>
+<body class="phone">
+    <header>
+        <h1>1100</h1>
+    </header>
+    <section>
+        <article>
+            <p></p>
+            <p id="request"></p>
+        </article>
+        <article>
+            <p>DPB, a.s.<br>Prestupny CL 1,00EUR<br>Platnost od <span id="date"></span> <span id="start"></span> do <span id="end"></span> hod.<br><span id="code"></span></p>
+            <p id="response"></p>
+        </article>
+        <article id="compose">
+            <p>type a text message</p>
+        </article>
+    </section>
+    <div id="appBar"
+         data-win-control="WinJS.UI.AppBar"
+         data-win-options="{placement:'bottom', layout:'commands'}">
+        <button data-win-control="WinJS.UI.AppBarCommand"
+                data-win-options="{id:'sendButton',
+            type: 'button',
+            label:'send',
+            tooltip:'send',
+            icon:'send',
+            section:'global',
+            disabled: true
+            }"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand"
+                data-win-options="{id:'attachButton',
+            type: 'button',
+            label:'attach',
+            tooltip:'attach',
+            icon:'attach',
+            section:'global'
+            }"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand"
+                data-win-options="{id:'speakButton',
+            type: 'button',
+            label:'speak',
+            tooltip:'speak',
+            icon:'microphone',
+            section:'global'
+            }"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand"
+                data-win-options="{id:'contactButton',
+            type: 'button',
+            label:'contact',
+            tooltip:'contact',
+            icon:'contact',
+            section:'global'
+            }"></button>
+    </div>
+</body>
+</html>
